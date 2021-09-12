@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  transition: all 0.1s ease;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.page_1,
+.page_2,
+.page_3,
+.page_4,
+.page_5,
+.page_6,
+.page_7,
+.page_8 {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.page_1 {
+  background: url(./page2/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_2 {
+  background: url(./page2/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_3 {
+  background: url(./page2/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_4 {
+  background: url(./page2/4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_5 {
+  background: url(./page2/5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_6 {
+  background: url(./page2/6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_7 {
+  background: url(./page2/7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_8 {
+  background: url(./page2/8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page_title h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 4px 4px 2px black;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+.page_title p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  padding-top: 2px;
+  text-shadow: 4px 4px 2px black;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page_paragraph {
+  background: rgba(0, 0, 0, 0.5);
+  width: 40%;
+  height: auto;
+  padding: 30px 30px;
+  text-align: justify;
+  border: 2px solid white;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.page_paragraph:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.page_paragraph p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.5;
+}
+
+.ending_page {
+  background: rgba(0, 0, 0, 0.5);
+  width: 25%;
+  height: auto;
+  padding: 30px 30px;
+  text-align: justify;
+  border: 2px solid white;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ending_page:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.farewell {
+  padding-bottom: 20px;
+}
+
+.farewell p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.5;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_buttons {
+  padding: 10px 20px;
+  background-color: #f72e09;
+  color: white;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.nav_buttons:hover,
+.nav_buttons_2:hover {
+  transform: translateY(-20%);
+}
+
+.nav_buttons:hover {
+  -moz-box-shadow: 0 0 10px #f72e09;
+  -webkit-box-shadow: 0 0 10px #f72e09;
+  box-shadow: 0 0 10px #f72e09;
+}
+
+.nav_buttons_2 {
+  padding: 10px 20px;
+  background-color: #4856dd;
+  color: white;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.nav_buttons_2:hover {
+  -moz-box-shadow: 0 0 10px #4856dd;
+  -webkit-box-shadow: 0 0 10px #4856dd;
+  box-shadow: 0 0 10px #4856dd;
+}
+
+.nav_buttons h4,
+.nav_buttons_2 h4 {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}

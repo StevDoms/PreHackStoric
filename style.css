@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  min-height: 722px;
+  width: 100%;
+  background: url(./hero_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top_page {
+  min-height: 577.6px;
+  width: 100%;
+  display: flex;
+}
+
+.page_image {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_image img {
+  width: 60%;
+  height: auto;
+  position: relative;
+  top: 17%;
+  right: 15%;
+}
+
+.page_image .caveman_art {
+  width: 15%;
+  height: auto;
+  position: relative;
+  top: 25%;
+  right: -5%;
+}
+
+.page_title {
+  width: 40%;
+  padding-right: 7%;
+  padding-left: 5.5%;
+}
+
+.main_title {
+  height: 35%;
+
+  padding-top: 25%;
+}
+
+.main_title h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.main_content_writing {
+  height: 25%;
+}
+
+.main_content_writing p {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: white;
+}
+
+.main_buttons {
+  height: 40%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  padding: 10px 0px;
+}
+
+.main_buttons a {
+  border: 2px solid #008080;
+  display: flex;
+  background: #e1c669;
+  transition: 0.3s ease-out;
+}
+
+.main_buttons a:hover {
+  background: #ffe278;
+}
+
+.text_number {
+  width: 20%;
+
+  display: grid;
+  place-items: center;
+}
+
+.text_number p {
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.text_title {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.text_title h3 {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.bottom_page {
+  min-height: 144.4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.datas {
+  width: 13%;
+  height: 60%;
+  border: 2px solid black;
+  margin-left: 80px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.datas:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.data_title {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.data_title p {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+  top: 8%;
+  color: white;
+}
+
+.data_info {
+  height: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data_info h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  position: relative;
+  top: -12%;
+  color: white;
+}

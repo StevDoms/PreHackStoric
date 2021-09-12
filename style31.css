@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Navigation Bar */
+.navigation {
+  --text: #f5f5f5e3;
+  --text-hover: rgba(0, 0, 0, 0.5);
+  --home-button: black;
+  --home-hover: rgba(0, 0, 0, 0.15);
+  --navigation-text: rgba(0, 0, 0, 0.4);
+  --navigation-dropdown: rgba(0, 0, 0, 0.5);
+  --navigation-dropdown-hover: rgba(0, 0, 0, 0.2);
+  --background: transparent;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  padding: 0px 20px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 50;
+  background: var(--background);
+}
+
+.navigation_box {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(39%);
+}
+
+/* Navigation Home */
+.navigation_home {
+  padding: 0 25px;
+  pointer-events: none;
+}
+
+.navigation_home_text {
+  background: none;
+  text-align: center;
+  border-radius: 15px;
+  padding: 8px 18px;
+  pointer-events: all;
+  transition: all 1s ease-out;
+  border: 2px solid var(--home-button);
+}
+
+.navigation_home_text:hover {
+  background: var(--home-hover);
+}
+
+/* Navigation Directory */
+.navigation_text {
+  background: var(--navigation-text);
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transition: all 1s ease-out;
+}
+
+.navigation_text:hover {
+  background: var(--text-hover);
+  cursor: pointer;
+}
+
+.navigation_text.is_active {
+  background: var(--text-hover);
+  text-align: center;
+  border-radius: 15px;
+  padding: 8px 18px;
+  border: 2px solid var(--text);
+}
+
+.navigation_title {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.home {
+  color: var(--home-button);
+}
+
+.navigation_text .navigation_title {
+  display: inline;
+}
+
+.fa-caret-down {
+  color: var(--text);
+  font-size: 1rem;
+  padding-left: 2px;
+}
+
+.navigation_break_line {
+  padding-top: 10px;
+}
+
+.navigation_dropdown {
+  opacity: 0;
+  height: 0%;
+  background: var(--navigation-dropdown);
+  transition: all 0.4s linear;
+  pointer-events: none;
+  border-radius: 6px;
+}
+
+.navigation_dropdown.active {
+  height: 73%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navigation_dropdown_item {
+  padding: 12px 20px;
+  padding-right: 25px;
+  display: flex;
+  color: var(--text);
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  transition: background 0.3s ease;
+}
+
+.navigation_dropdown_item:hover {
+  background: var(--navigation-dropdown-hover);
+}
+
+.nav-scrolled {
+  --text: rgba(0, 0, 0, 1);
+  --text-hover: #f5f5f5e5;
+  --home-button: #f5f5f5;
+  --home-hover: rgba(255, 255, 255, 0.15);
+  --navigation-text: #f5f5f5;
+  --navigation-dropdown: rgba(255, 255, 255, 0.9);
+  --navigation-dropdown-hover: rgba(0, 0, 0, 0.1);
+  --background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero {
+  background: black;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1536px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dots {
+  position: relative;
+  top: -80px;
+  display: none;
+  background: black;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+.content_information {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: black;
+  padding: 10px 0px;
+}
+
+.content_image {
+  width: 60%;
+  background: url(./page31/trex4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+}
+
+.content_info {
+  width: 40%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content_info_title {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.content_info_title h1 {
+  font-family: "Calistoga", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  padding: 20px;
+  color: #f7f4ef;
+}
+
+.content_info_box {
+  height: 30%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  border: 2px solid #f7f4ef;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #f7f4ef;
+}
+
+.content_info_paragraph {
+  height: 50%;
+  padding-top: 30px;
+}
+
+.content_info_paragraph p {
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f7f4ef;
+  text-align: justify;
+}
